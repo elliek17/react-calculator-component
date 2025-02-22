@@ -7,7 +7,9 @@ This is a basic calculator component.
 
 It does basic calculations such as Adding, Substracting, Multiplying and Dividing.
 
-Will upload the Demo once available
+Will upload the Demo once available.
+
+![Componant Picture](public\demo.png)
 
 
 ## Needed Credits
