@@ -1,3 +1,4 @@
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 "use client";
 import React from 'react';
 import { useState } from 'react';
@@ -84,7 +85,7 @@ const Card = () => {
         return array
     }
 
-    let handleKeyDown = (e) =>{
+    const handleKeyDown = (e) =>{
             if(e.key==="1"){
                 Add(1);
             }
