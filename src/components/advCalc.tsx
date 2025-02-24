@@ -321,37 +321,40 @@ const Card = () => {
 
   return (
       <div className="calculator" onKeyDown={handleKeyDown}>
-        <div className="output">
+        <div className='screen'>
+          <div className="output">
           <span className="result">{upper}</span>
         </div>
         <div className="output">
           <span className="result">{(isNaN(input))?"ERROR":input}</span>
+        </div>
         </div>
         <div className="buttons">
             <button onClick={Reset} className="bg-red">C</button>
             <button onClick={Power}>x<sup>y</sup></button>
             <button onClick={Sqrt}>√</button>
             <button onClick={Percent}>%</button>
-            <button onClick={Divide}>/</button>
-            <button onClick={Cos}>cos</button>
+            <button onClick={Del} className="bg-blue">⌫</button>
             <button onClick={() => Add(1)}>1</button>
             <button onClick={() => Add(2)}>2</button>
             <button onClick={() => Add(3)}>3</button>
-            <button onClick={Sum}>+</button>
-            <button onClick={Sin}>sin</button>
+            <button onClick={Multiply}>*</button>
+            <button onClick={Cos}>cos</button>
             <button onClick={() => Add(4)}>4</button>
             <button onClick={() => Add(5)}>5</button>
             <button onClick={() => Add(6)}>6</button>
-            <button onClick={Minus}>-</button>
-            <button onClick={Tan}>tan</button>
+            <button onClick={Divide}>/</button>
+            <button onClick={Sin}>sin</button>
             <button onClick={() => Add(7)}>7</button>
             <button onClick={() => Add(8)}>8</button>
             <button onClick={() => Add(9)}>9</button>
-            <button onClick={Multiply}>*</button>
-            <button onClick={Ln}>ln</button>
-            <button onClick={AddPi}>π</button>
-            <button onClick={() => Add(0)}>0</button>
+            <button onClick={Sum}>+</button>
+            <button onClick={Tan}>tan</button>
             <button onClick={Decimal}>.</button>
+            <button onClick={() => Add(0)}>0</button>
+            <button onClick={AddPi}>π</button>
+            <button onClick={Minus}>-</button>
+            <button onClick={Ln}>ln</button>
             <button onClick={Result} className="bg-green">=</button>
         </div>
       </div>
