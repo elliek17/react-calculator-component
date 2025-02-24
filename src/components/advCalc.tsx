@@ -328,6 +328,7 @@ const Card = () => {
           <span className="result">{(isNaN(input))?"ERROR":input}</span>
         </div>
         <div className="buttons">
+            <button onClick={Reset} className="bg-red">C</button>
             <button onClick={Cos}>cos</button>
             <button onClick={Power}>x<sup>y</sup></button>
             <button onClick={Sqrt}>√</button>
@@ -343,16 +344,15 @@ const Card = () => {
             <button onClick={() => Add(5)}>5</button>
             <button onClick={() => Add(6)}>6</button>
             <button onClick={Minus}>-</button>
-            <button onClick={Ln}>ln</button>
             <button onClick={() => Add(7)}>7</button>
             <button onClick={() => Add(8)}>8</button>
             <button onClick={() => Add(9)}>9</button>
             <button onClick={Multiply}>*</button>
+            <button onClick={Ln}>ln</button>
             <button onClick={AddPi}>π</button>
-            <button onClick={Reset} className="bg-red">C</button>
             <button onClick={() => Add(0)}>0</button>
-            <button onClick={Result} className="bg-green">=</button>
             <button onClick={Decimal}>.</button>
+            <button onClick={Result} className="bg-green">=</button>
         </div>
       </div>
   )
