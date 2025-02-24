@@ -9,7 +9,7 @@ It does basic calculations such as Adding, Substracting, Multiplying and Dividin
 
 I also added a more advanced calculator, with added features, and better overall code!
 
-![Componant Picture](public/advDemo.png)
+![Componant Picture](public/demo.png)
 
 Check out the demo [here](https://react-calculator-component.vercel.app/)
 
