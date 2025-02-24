@@ -3,15 +3,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Basic Calculator
 
-This is a basic calculator component.
+This is a basic [calculator component](https://react-calculator-component.vercel.app/)
 
 It does basic calculations such as Adding, Substracting, Multiplying and Dividing.
-
-Will upload the Demo once available.
 
 I also added a more advanced calculator, with added features, and better overall code!
 
 ![Componant Picture](public/advDemo.png)
+
+Check out the demo [here](https://react-calculator-component.vercel.app/)
 
 ## Needed Credits
 
