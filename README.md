@@ -9,11 +9,11 @@ It does basic calculations such as Adding, Substracting, Multiplying and Dividin
 
 Will upload the Demo once available.
 
-![Componant Picture](public\demo.png)
+![Componant Picture](/public\demo.png)
 
 I also added a more advanced calculator, with added features, and better overall code!
 
-![Second Componant Picture](public\advDemo.png)
+![Second Componant Picture](/public/public\advDemo.png)
 
 ## Needed Credits
 
