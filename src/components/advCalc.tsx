@@ -26,8 +26,10 @@ const Card = () => {
           const inputStr = input.toString();
           const absVal = Number(inputStr+decN)
           neg? setInput(-absVal): setInput(absVal)
-          setDec(false)
-          setNeg(false)
+          if(n!==0) {
+            setDec(false)
+            setNeg(false)
+          }
           return input
         }
         else if(neg){
