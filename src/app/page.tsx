@@ -1,9 +1,11 @@
+import AdvCalc from '@/components/advCalc'
 import Calc from '@/components/calc'
 
 export default function Home() {
   return (
-    <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="flex flex-col  sm:flex-row min-h-screen justify-center gap-20 items-center grid-cols-2">
     <Calc />
+    <AdvCalc />
     </div>
   );
 }

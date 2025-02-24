@@ -175,8 +175,7 @@ const StyledWrapper = styled.div`
     width: 190px;
     height: 272px;
     font-family: Arial, sans-serif;
-    margin-top:50%
-    margin: 0 auto;
+    margin: auto;
     padding: 10px;
   }
 
