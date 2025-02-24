@@ -12,6 +12,7 @@ const Card = () => {
     const [upper,setUpper] = useState("")
     const [dec, setDec] = useState(false)
     const [neg, setNeg] = useState(false)
+    const [zero, setZero] = useState(0)
 
     function Add(n:number){
         if(!dec&&!neg){
@@ -22,13 +23,17 @@ const Card = () => {
         }
         else if(dec){
           const nStr:string = n.toString();
-          const decN:string = "."+nStr
-          const inputStr = input.toString();
-          const absVal = Number(inputStr+decN)
-          neg? setInput(-absVal): setInput(absVal)
-          if(n!==0) {
+          if (n!==0){
+            const decN:string = "."+"0".repeat(zero)+nStr
+            const inputStr = input.toString();
+            const absVal = Number(inputStr+decN)
+            neg? setInput(-absVal): setInput(absVal)
             setDec(false)
             setNeg(false)
+            setZero(0)
+          }
+          else{
+            setZero(zero+1)
           }
           return input
         }
@@ -263,6 +268,7 @@ const Card = () => {
         setUpper("")
         setDec(false)
         setNeg(false)
+        setZero(0)
     }
 
     function AddPi(){
@@ -332,7 +338,6 @@ const Card = () => {
           Del();
       }
     }
-
   return (
       <div className="calculator" onKeyDown={handleKeyDown}>
         <div className='screen'>
