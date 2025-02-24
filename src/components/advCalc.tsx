@@ -1,5 +1,3 @@
-/* eslint-disable  @typescript-eslint/no-explicit-any */
-
 "use client";
 import React from 'react';
 import { useState } from 'react';
@@ -86,7 +84,7 @@ const Card = () => {
 
     function Cos(){
       if(input!==0){
-        let toRad = input*3.14159/180
+        const toRad = input*3.14159/180
         setInput(Math.cos(toRad));
         setOp("")
         setUpper("")
@@ -102,7 +100,7 @@ const Card = () => {
 
     function Sin(){
       if(input!==0){
-        let toRad = input*3.14159/180
+        const toRad = input*3.14159/180
         setInput(Math.sin(toRad));
         setOp("")
         setUpper("")
@@ -118,7 +116,7 @@ const Card = () => {
 
     function Tan(){
       if(input!==0){
-        let toRad = input*3.14159/180
+        const toRad = input*3.14159/180
         setInput(Math.tan(toRad));
         setOp("")
         setUpper("")
@@ -205,21 +203,21 @@ const Card = () => {
           return input;
         }
         else if (op==="cos"){
-          let toRad = input*3.14159/180
+          const toRad = input*3.14159/180
           setInput(Math.cos(toRad));
           setOp("")
           setUpper("")
           return input;
         }
         else if (op==="sin"){
-          let toRad = input*3.14159/180
+          const toRad = input*3.14159/180
           setInput(Math.sin(toRad));
           setOp("")
           setUpper("")
           return input;
         }
         else if (op==="tan"){
-          let toRad = input*3.14159/180
+          const toRad = input*3.14159/180
           setInput(Math.tan(toRad));
           setOp("")
           setUpper("")
@@ -262,7 +260,7 @@ const Card = () => {
       return input
     }
 
-    const handleKeyDown = (e) =>{
+    const handleKeyDown = (e:React.KeyboardEvent<HTMLDivElement>) =>{
       if(e.key==="1"){
           Add(1);
       }

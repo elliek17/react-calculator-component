@@ -1,4 +1,3 @@
-/* eslint-disable  @typescript-eslint/no-explicit-any */
 "use client";
 import React from 'react';
 import { useState } from 'react';
@@ -55,37 +54,37 @@ const Card = () => {
 
     function Result(){
         if(operation==="+"){
-            let first:number = Number(last.join(''));
-            let second:number = Number(array.join(''));
-            let result = first+second;
+            const first:number = Number(last.join(''));
+            const second:number = Number(array.join(''));
+            const result = first+second;
             Reset();
             setArray([result])
         }
         else if(operation==="-"){
-            let first:number = Number(last.join(''));
-            let second:number = Number(array.join(''));
-            let result = first-second;
+            const first:number = Number(last.join(''));
+            const second:number = Number(array.join(''));
+            const result = first-second;
             Reset();
             setArray([result])
         }
         else if(operation==="*"){
-            let first:number = Number(last.join(''));
-            let second:number = Number(array.join(''));
-            let result = first*second;
+            const first:number = Number(last.join(''));
+            const second:number = Number(array.join(''));
+            const result = first*second;
             Reset();
             setArray([result])
         }
         else if(operation==="/"){
-            let first:number = Number(last.join(''));
-            let second:number = Number(array.join(''));
-            let result = first/second;
+            const first:number = Number(last.join(''));
+            const second:number = Number(array.join(''));
+            const result = first/second;
             Reset();
             setArray([result])
         }
         return array
     }
 
-    const handleKeyDown = (e) =>{
+    const handleKeyDown = (e:React.KeyboardEvent<HTMLDivElement>) =>{
             if(e.key==="1"){
                 Add(1);
             }
