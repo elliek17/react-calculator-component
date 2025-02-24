@@ -11,20 +11,28 @@ const Card = () => {
     const [op, setOp] = useState('');
     const [upper,setUpper] = useState("")
     const [dec, setDec] = useState(false)
+    const [neg, setNeg] = useState(false)
 
     function Add(n:number){
-        if(!dec){
+        if(!dec&&!neg){
           const nStr:string = n.toString();
           const inputStr = input.toString();
           setInput(Number(inputStr+nStr));
           return input
         }
-        else{
+        else if(dec){
           const nStr:string = n.toString();
           const decN:string = "."+nStr
           const inputStr = input.toString();
-          setInput(Number(inputStr+decN));
+          const absVal = Number(inputStr+decN)
+          neg? setInput(-absVal): setInput(absVal)
           setDec(false)
+          setNeg(false)
+          return input
+        }
+        else if(neg){
+          setInput(0-n);
+          setNeg(false)
           return input
         }
     }
@@ -41,7 +49,10 @@ const Card = () => {
     }
 
     function Minus(){
-        if(op===""){
+        if(input===0){
+          setNeg(true)
+        }
+        else if(op===""){
             setLast(input);
             setOp('-');
             setUpper(input.toString()+"-")
@@ -249,6 +260,7 @@ const Card = () => {
         setOp('');
         setUpper("")
         setDec(false)
+        setNeg(false)
     }
 
     function AddPi(){
