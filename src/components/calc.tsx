@@ -142,7 +142,7 @@ const Card = () => {
         }
 
   return (
-      <div className="calculator">
+      <div className="calculator" onKeyDown={handleKeyDown}>
         <div className="output">
           <span className="result">{array}</span>
         </div>
